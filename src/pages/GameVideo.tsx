@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import games from './gameInfo'
 import ReactPlayer from 'react-player'
+import games from './api/gameInfo'
 
 export default function GameVideo({ index }: { index: number }) {
   const [hasWindow, setHasWindow] = useState(false)

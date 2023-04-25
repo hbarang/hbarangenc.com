@@ -3,8 +3,8 @@ import { useKeenSlider } from 'keen-slider/react'
 import React, { useState } from 'react'
 import GameCard from './GameCard'
 import GameVideo from './GameVideo'
-import games from './gameInfo'
 import Arrow from './GameSliderArrow'
+import games from './api/gameInfo'
 
 const GameSlider: NextPage = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0)
@@ -32,7 +32,9 @@ const GameSlider: NextPage = () => {
               return (
                 <div
                   key={idx}
-                  className={'keen-slider__slide ' + 'number-slide' + idx}
+                  className={
+                    'keen-slider__slide ' + 'number-slide' + idx.toString()
+                  }
                 >
                   <GameVideo index={currentSlide}></GameVideo>
                   <GameCard index={currentSlide}></GameCard>
