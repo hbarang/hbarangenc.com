@@ -6,6 +6,9 @@ import { api } from "~/utils/api";
 
 import "~/styles/globals.css";
 
+import './index.css';
+import "keen-slider/keen-slider.min.css";
+
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
   pageProps: { session, ...pageProps },
