@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import GameSlider from "./GameSlider";
+import ReactPlayer from 'react-player'
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +16,6 @@ const Home: NextPage = () => {
           <GameSlider></GameSlider>
         </div>
       </main>
-
     </>
   );
 };
