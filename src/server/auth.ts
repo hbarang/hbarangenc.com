@@ -15,16 +15,16 @@ import { prisma } from "~/server/db";
  *
  * @see https://next-auth.js.org/getting-started/typescript#module-augmentation
  */
-declare module "next-auth" {
-  interface Session extends DefaultSession {
-    user: User & DefaultSession["user"];
-  }
+// declare module "next-auth" {
+//   interface Session extends DefaultSession {
+//     // user: User & DefaultSession["user"];
+//   }
 
-  interface User {
-    // ...other properties
-    // role: UserRole;
-  }
-}
+//   // interface User {
+//   //   // ...other properties
+//   //   // role: UserRole;
+//   // }
+// }
 
 /**
  * Options for NextAuth.js used to configure adapters, providers, callbacks, etc.
@@ -43,10 +43,10 @@ export const authOptions: NextAuthOptions = {
   },
   adapter: PrismaAdapter(prisma),
   providers: [
-    DiscordProvider({
-      clientId: env.DISCORD_CLIENT_ID,
-      clientSecret: env.DISCORD_CLIENT_SECRET,
-    }),
+    // DiscordProvider({
+    //   clientId: env.DISCORD_CLIENT_ID,
+    //   clientSecret: env.DISCORD_CLIENT_SECRET,
+    // }),
     /**
      * ...add more providers here.
      *

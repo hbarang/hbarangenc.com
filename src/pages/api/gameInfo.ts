@@ -18,7 +18,7 @@ const games = [
         image: 'game.png',
         link: 'https://www.google.com',
         linkText: 'Google',
-        video: 'https://www.youtube.com/embed/9bZkp7q19f0'
+        video: 'https://www.youtube.com/shorts/e17qFNE-B6k'
     },
     {
         id: '2',
