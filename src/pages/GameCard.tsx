@@ -18,10 +18,10 @@ function GameCard({ index }: { index: number }) {
         <Image src={'/game.png'} alt={'game'} width={300} height={500} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {games[index]!.title}
+            {games[index]?.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {games[index]!.description}
+            {games[index]?.description}
           </Typography>
         </CardContent>
       </CardActionArea>
