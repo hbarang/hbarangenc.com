@@ -14,7 +14,7 @@ export default function GameVideo({ index }: { index: number }) {
   return (
     <>
       <div className="video">
-        {hasWindow && <ReactPlayer url={games[index]!.video} />}
+        {hasWindow && <ReactPlayer url={games[index]!.videoLink} />}
       </div>
     </>
   )

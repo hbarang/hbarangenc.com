@@ -5,6 +5,7 @@ import GameCard from './GameCard'
 import GameVideo from './GameVideo'
 import Arrow from './GameSliderArrow'
 import games from './api/gameInfo'
+import gameIcon from '../../public/game-icon.png'
 
 const GameSlider: NextPage = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0)
@@ -23,11 +24,7 @@ const GameSlider: NextPage = () => {
     <>
       <div>
         <div className="navigation-wrapper">
-          <div
-            ref={sliderRef}
-            className="keen-slider"
-            style={{ height: '90vh' }}
-          >
+          <div ref={sliderRef} className="keen-slider">
             {games.map((_game, idx) => {
               return (
                 <div
@@ -65,7 +62,7 @@ const GameSlider: NextPage = () => {
         </div>
       </div>
       {loaded && instanceRef.current && (
-        <div className="dots">
+        <div className="dots flex pt-2 pb-2 pl-0 pr-0 top-12 relative">
           {[
             ...Array(instanceRef.current.track.details.slides.length).keys(),
           ].map((idx) => {
@@ -75,7 +72,16 @@ const GameSlider: NextPage = () => {
                 onClick={() => {
                   instanceRef.current?.moveToIdx(idx)
                 }}
-                className={'dot' + (currentSlide === idx ? ' active' : '')}
+                className={
+                  'dot focus:transition-opacity ease-in-out duration-200' +
+                  (currentSlide === idx
+                    ? ' active transition-opacity ease-in-out duration-750'
+                    : '')
+                }
+                style={{
+                  backgroundImage: `url(${gameIcon.src})`,
+                  backgroundSize: 'cover',
+                }}
               ></button>
             )
           })}

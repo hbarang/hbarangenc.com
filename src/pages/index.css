@@ -10,24 +10,6 @@
   max-height: 100vh;
 }
 
-.number-slide1 {
-}
-
-.number-slide2 {
-}
-
-.number-slide3 {
-}
-
-.number-slide4 {
-}
-
-.number-slide5 {
-}
-
-.number-slide6 {
-}
-
 .navigation-wrapper {
   position: relative;
 }
@@ -39,22 +21,17 @@
 }
 
 .dot {
-  /* border: none; */
-  width: 25px;
-  height: 25px;
-  background: #c5c5c5;
-  border-radius: 1%;
+  width: 240px;
+  height: 240px;
+  border-radius: 5%;
   margin: 0 5px;
   padding: 5px;
   cursor: pointer;
-}
-
-.dot:focus {
-  outline: none;
+  opacity: calc(1 / 7);
 }
 
 .dot.active {
-  background: #000;
+  opacity: 1;
 }
 
 .arrow {
@@ -64,7 +41,6 @@
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
-  fill: #fff;
   cursor: pointer;
 }
 
@@ -79,4 +55,9 @@
 
 .arrow--disabled {
   fill: rgba(255, 255, 255, 0.5);
+}
+
+.MuiPaper-root button:nth-child(1) div:nth-child(1) {
+  width: fit-content;
+  margin: auto;
 }
