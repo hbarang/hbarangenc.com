@@ -6,6 +6,7 @@ import GameVideo from './GameVideo'
 import Arrow from './GameSliderArrow'
 import games from './api/gameInfo'
 import gameIcon from '../../public/game-icon.png'
+import GameIcon from './GameIcon'
 
 const GameSlider: NextPage = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0)
@@ -67,22 +68,13 @@ const GameSlider: NextPage = () => {
             ...Array(instanceRef.current.track.details.slides.length).keys(),
           ].map((idx) => {
             return (
-              <button
+              <GameIcon
                 key={idx}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(idx)
-                }}
-                className={
-                  'dot focus:transition-opacity ease-in-out duration-200' +
-                  (currentSlide === idx
-                    ? ' active transition-opacity ease-in-out duration-750'
-                    : '')
-                }
-                style={{
-                  backgroundImage: `url(${gameIcon.src})`,
-                  backgroundSize: 'cover',
-                }}
-              ></button>
+                currentSlide={currentSlide}
+                index={idx}
+                instanceRef={instanceRef}
+                gameIcon={games[idx]?.gameIcon!}
+              ></GameIcon>
             )
           })}
         </div>

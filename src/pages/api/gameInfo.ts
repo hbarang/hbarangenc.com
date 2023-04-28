@@ -6,6 +6,7 @@ export interface IGameInfo {
     googlePlayLink?: string;
     appleStoreLink?: string;
     videoLink: string;
+    gameIcon: string;
 }
 
 const games = [
@@ -17,6 +18,7 @@ const games = [
         appleStoreLink: 'https://apps.apple.com/us/app/guns-and-bounce/id1660964163',
         googlePlayLink: 'https://play.google.com/store/apps/details?id=com.lagotgames.bulletsandballs&hl=en&gl=US',
         videoLink: 'https://www.youtube.com/watch?v=OkzPAmhXYxM',
+        gameIcon: "",
     },
     {
         id: '2',
@@ -26,6 +28,7 @@ const games = [
         appleStoreLink: 'https://apps.apple.com/us/app/fashion-evolution/id1602114712',
         googlePlayLink: 'https://play.google.com/store/apps/details?id=com.lagotgames.fashionevolution&hl=en&gl=US',
         videoLink: "https://www.youtube.com/shorts/bAVvYu77Cg8",
+        gameIcon: "",
     },
     {
         id: '3',
@@ -34,7 +37,8 @@ const games = [
         description: 'Worked as a solo developer for this game. Worked preciselyon car physics to keep users engaged in the game.',
         appleStoreLink: 'https://apps.apple.com/us/app/rush-evolution/id1634493780',
         googlePlayLink: 'https://play.google.com/store/apps/details?id=com.lagotgames.trafficdriver&hl=en&gl=US',
-        videoLink: "https://www.youtube.com/watch?v=QrkWB8ej0A4"
+        videoLink: "https://www.youtube.com/watch?v=QrkWB8ej0A4",
+        gameIcon: "",
     },
     {
         id: '4',
@@ -42,7 +46,8 @@ const games = [
         title: 'Merge Blocks Merge - Game 4',
         description: 'My first proffesional game developer job. Worked with 2 other game developers to launch this game. Responsbile with gameplay, ad monetization, analytics, UI. 1+ million downloads',
         appleStoreLink: 'https://apps.apple.com/us/app/merge-blocks-merge/id1503507357',
-        videoLink: "https://www.youtube.com/watch?v=Cfzf23ouvFk&t=17s"
+        videoLink: "https://www.youtube.com/watch?v=Cfzf23ouvFk&t=17s",
+        gameIcon: "",
     }
 ] as IGameInfo[];
 
