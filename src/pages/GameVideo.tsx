@@ -1,15 +1,14 @@
-import { useEffect, useState } from 'react'
-import ReactPlayer from 'react-player'
-import games from './api/gameInfo'
+import ReactPlayer from "react-player";
+import games from "./api/gameInfo";
+import { useState, useEffect } from "react";
 
 export default function GameVideo({ index }: { index: number }) {
-  const [hasWindow, setHasWindow] = useState(false)
-
+  const [hasWindow, setHasWindow] = useState(false);
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setHasWindow(true)
+    if (typeof window !== "undefined") {
+      setHasWindow(true);
     }
-  }, [])
+  }, []);
 
   return (
     <>
@@ -17,5 +16,5 @@ export default function GameVideo({ index }: { index: number }) {
         {hasWindow && <ReactPlayer url={games[index]!.videoLink} />}
       </div>
     </>
-  )
+  );
 }
