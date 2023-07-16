@@ -46,7 +46,7 @@ const games = [
     googlePlayLink:
       "https://play.google.com/store/apps/details?id=com.lagotgames.trafficdriver&hl=en&gl=US",
     videoLink: "https://www.youtube.com/watch?v=QrkWB8ej0A4",
-    gameIcon: "rush-evo.png",
+    gameIcon: "rush-evo.PNG",
   },
   {
     id: "4",
