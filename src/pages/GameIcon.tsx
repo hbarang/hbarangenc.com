@@ -1,18 +1,17 @@
-import { KeenSliderHooks, KeenSliderInstance } from 'keen-slider'
-import { StaticImageData } from 'next/image'
-import React from 'react'
+import { KeenSliderHooks, KeenSliderInstance } from "keen-slider";
+import React from "react";
 
-import iconData from '../../public/game-icon.png'
+import iconData from "../../public/game-icon.png";
 
 interface GameIconProps {
-  index: number
+  index: number;
   instanceRef: React.MutableRefObject<KeenSliderInstance<
     {},
     {},
     KeenSliderHooks
-  > | null>
-  currentSlide: number
-  gameIcon: string
+  > | null>;
+  currentSlide: number;
+  gameIcon: string;
 }
 
 export default function GameIcon({
@@ -21,26 +20,26 @@ export default function GameIcon({
   gameIcon,
   currentSlide,
 }: GameIconProps) {
-  let gameIconString = iconData.src
+  // let gameIconString = iconData.src;
 
   return (
     <>
       <button
         key={index}
         onClick={() => {
-          instanceRef.current?.moveToIdx(index)
+          instanceRef.current?.moveToIdx(index);
         }}
         className={
-          'dot focus:transition-opacity ease-in-out duration-200' +
+          "dot duration-200 ease-in-out focus:transition-opacity" +
           (currentSlide === index
-            ? ' active transition-opacity ease-in-out duration-750'
-            : '')
+            ? " active duration-750 transition-opacity ease-in-out"
+            : "")
         }
         style={{
-          backgroundImage: `url(${gameIconString})`,
-          backgroundSize: 'cover',
+          backgroundImage: `url(${gameIcon})`,
+          backgroundSize: "cover",
         }}
       ></button>
     </>
-  )
+  );
 }

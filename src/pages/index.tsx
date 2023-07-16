@@ -11,9 +11,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/lagotGames.png" />
       </Head>
       <main>
-        <div>
-          <GameSlider></GameSlider>
-        </div>
+        <GameSlider></GameSlider>
       </main>
     </>
   );
